@@ -5,5 +5,38 @@
     <script type="text/javascript" src="lib/UIlink.js"></script>
   </head>
   <body>
+    <button data-uilinkname="_UIButton1" data-uilinkevent="click" data-uilinkeventfunc="OnButton1Click">MyButton</button>
+    <input data-uilinkname="_UITextBox1" data-uilinkevent="input" data-uilinkeventfunc="OnTextBoxInput">MyInput</input>
+    
+    <script>
+      // testClass
+      function Test()
+      {
+        this._UIButton1 = null;
+        this._UITextBox1 = null;
+        // alternative
+        this._UILink = null;
+      }
+      Test.prototype.OnButton1Click = function(sender){
+        alert("The Contant of the Button is: " + sender.html());
+      };
+      Test.prototype.OnTextBoxInput = function(sender){
+        this._UIButton1.html(sender.val());
+      };
+      Test.prototype.Print = function(sender){
+        this._UILink.Update();
+      };
+      
+      var myTestObject = new Test();
+      var elem = $("body");
+      
+      var myUILink = new UILink();
+      myUILink.AddUILink(myTestObject,"_UI",elem);
+      
+      elem.trigger("UILinkUpdate");
+      // or
+      myTestObject.print();
+      
+    </script>
   </body>
 </html>
