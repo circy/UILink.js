@@ -1,5 +1,5 @@
 /*!
- * UILink.js v0.2
+ * UILink.js v0.3
  *
  * This is a small library with their help you can HTML elements
  * in connection with properties in a class or bring object.
@@ -11,7 +11,6 @@
  * Licensed MIT
  * http://www.opensource.org/licenses/mit-license.php
  */
-
 
 function UILink(eventHandeler)
 {
@@ -58,6 +57,15 @@ function UILinkItem(ObjInfo)
 UILinkItem.prototype.Init = function () {
     this._eventNameParsingFinish = "UILink_" + this._name + "_ParsingFinish";
     this._area.bind("UILinkUpdate",this.StartParsing.bind(this));
+
+    if(this._toParseObject["_UILink"] != undefined)
+    {
+        this._toParseObject["_UILink"] = this;
+    }
+};
+
+UILinkItem.prototype.Update = function(){
+   this.StartParsing();
 };
 
 UILinkItem.prototype.StartParsing = function () {
@@ -102,6 +110,12 @@ UILinkItem.prototype.StartParsing = function () {
                 }.bind(this)).bind(this);
             }
         this._toParseObject[item] = temp;
+
+        if(item == "_UILink")
+        {
+            this._toParseObject[item] = this;
+        }
+
     }.bind(this));
     if(this._eventHandeler != undefined)
     {
@@ -111,3 +125,6 @@ UILinkItem.prototype.StartParsing = function () {
         console.log("No Eventhanderler in UILink configt.");
     }
 };
+
+
+
