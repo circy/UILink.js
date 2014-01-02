@@ -1,5 +1,5 @@
 /*!
- * UILink.js v0.1 - for Webpack ( https://github.com/webpack/webpack )
+ * UILink.js v0.2 - for Webpack ( https://github.com/webpack/webpack )
  *
  * This is a small library with their help you can HTML elements
  * in connection with properties in a class or bring object.
@@ -21,6 +21,18 @@ function UILink(eventHandeler)
 }
 
 UILink.prototype.AddUILink = function (toParseObject, varPrefix, area) {
+
+    if(toParseObject == undefined ||
+       typeof toParseObject != "object" ||
+       varPrefix == undefined ||
+       varPrefix == "" ||
+       area == undefined ||
+       area == "")
+    {
+        console.log("With the given parameters, what is not true, it was not created a new UILink object.");
+        return;
+    }
+
     var ObjInfo;
     ObjInfo = {
         EventHandeler: this._eventHandeler,
@@ -51,6 +63,13 @@ UILinkItem.prototype.Init = function () {
 
 UILinkItem.prototype.StartParsing = function () {
     var uiMembers = [];
+
+    if(this._toParseObject == undefined)
+    {
+        console.log("Object reference lost in " + this._name);
+        return;
+    }
+
     Object.getOwnPropertyNames(this._toParseObject).forEach(function(item) {
         if(item.length >= this._varPrefix.length && item.substr(0,this._varPrefix.length) == this._varPrefix) uiMembers.push(item);
     }.bind(this));
@@ -63,18 +82,35 @@ UILinkItem.prototype.StartParsing = function () {
                 {
                     if(temp.data("uilinkeventfunc") != undefined)
                     {
-                        this._toParseObject[temp.data("uilinkeventfunc")](temp);
+                        if(typeof this._toParseObject[temp.data("uilinkeventfunc")] == "function")
+                        {
+                            this._toParseObject[temp.data("uilinkeventfunc")](temp);
+                        }else
+                        {
+                            console.log("The specified HTML function does not match any function from the object match. The tryed Functionname:: "
+                                        + temp.data("uilinkeventfunc"));
+                        }
                     }else
                     {
                         if(this._eventHandeler != undefined)
+                        {
                             this._eventHandeler.emit("UILink_" + this.name + "_" + item + "_" + temp.data("UILinkEvent"), temp);
+                        }else
+                        {
+                            console.log("No Eventhanderler in UILink configt.");
+                        }
                     }
                 }.bind(this)).bind(this);
             }
         this._toParseObject[item] = temp;
     }.bind(this));
     if(this._eventHandeler != undefined)
+    {
         this._eventHandeler.emit(this._eventNameParsingFinish);
+    }else
+    {
+        console.log("No Eventhanderler in UILink configt.");
+    }
 };
 
 module.exports = UILink;
