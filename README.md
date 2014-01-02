@@ -86,6 +86,29 @@ This UILink works you have to trigger an event to the selector object in our cas
 elem.trigger("UILinkUpdate");
 ``` 
 
+alternative you can also, if you do not want to trigger the dome event, in its Class object or a property to add the name "_UILink" this property provides a function called at disposal. "Update ()" can be called as soon as the object has been added to UILink.
+
+``` Javascript
+function Test()
+{
+  this._UIButton1 = null;
+  this._UITextBox1 = null;
+  
+  //new Probertie
+  this._UILink = null;
+}
+Test.prototype.OnButton1Click = function(sender){
+  alert("The Contant of the Button is: " + sender.html());
+};
+Test.prototype.OnTextBoxInput = function(sender){
+  this._UIButton1.html(sender.val());
+};
+// a function this wos called, if print in the dom
+Test.prototype.Print = function(){
+  this._UILink.Update();
+};
+```
+
 
 License:
 =========
