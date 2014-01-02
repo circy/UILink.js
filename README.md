@@ -74,12 +74,17 @@ Next, we make two ui elements in the dom
   <input data-uilinkname="_UITextBox1" data-uilinkevent="input" data-uilinkeventfunc="OnTextBoxInput">MyInput</input>
 </body>
 ```
-data-uilinkname: is the name ob the member variables in which the UI elements to be stored
+data-uilinkname: is the name ob the member variables in which the UI elements to be stored.
 In addition, you can also still the same events or even equal to either the appropriate funtion specify
 data-uilinkevent: the event "click, input..." (jquery)
 data-uilinkeventfunc: The name of a function in an object that is executed when the events occur
 
+Part 6:
+This UILink works you have to trigger an event to the selector object in our case the "body". This makes sense if you divide a page into different areas and regions for each object with a suitable template is ready. The display changes occur ui elemnte to or disappear and every time the word jquery function .Html() is called. Every time the function. Html () is called simply hangs .Trigger("UILinkUpdate") in it. or when working as in, for example only in the body one makes you simply. 
 
+``` Javascript
+$("body").trigger("UILinkUpdate");
+``` 
 
 
 License:
