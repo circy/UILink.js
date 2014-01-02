@@ -34,7 +34,7 @@ var myUILink = new UILink();
 Part 3:
 For illustrative purposes, we create a small class:
 (For convenience, we put everything scripte simply in the body tag of the html 
-file or in a <script> - Tag.)
+file or in a script - Tag.)
 
 ``` Javascript
 function Test()
