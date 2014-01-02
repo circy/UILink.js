@@ -56,12 +56,12 @@ Announce the test object the UILink
 ``` Javascript
 // Creat a object from the test Class
 var testObject = new Test();
-
+var elem = $("body");
 // Add the object to UILink
 // Param 1: the object 
 // Param 2: Prefix the member variables in which the UI elements to be stored
 // Param 3: In which area of ​​the DOM UI elements can occur. (JQuery - Selctorelement)
-myUILink.AddUiLink(testObject,"_UI",$("body"));
+myUILink.AddUiLink(testObject,"_UI",elem);
 
 ```
 
@@ -83,7 +83,7 @@ Part 6:
 This UILink works you have to trigger an event to the selector object in our case the "body". This makes sense if you divide a page into different areas and regions for each object with a suitable template is ready. The display changes occur ui elemnte to or disappear and every time the word jquery function .Html() is called. Every time the function. Html () is called simply hangs .Trigger("UILinkUpdate") in it. or when working as in, for example only in the body one makes you simply. 
 
 ``` Javascript
-$("body").trigger("UILinkUpdate");
+elem.trigger("UILinkUpdate");
 ``` 
 
 
