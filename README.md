@@ -26,13 +26,15 @@ The integrate jquery and UILink:
 Part 2:
 Create a object of UILink without event emitter:
 ``` Javascript
-//If she is working with a module system or even as a Global event emitter to disposal have passed it this easy to intercept the constructer to events from UILink.
+//If she is working with a module system or even as a Global event emitter to 
+disposal have passed it this easy to intercept the constructer to events from UILink.
 var myUILink = new UILink();
 ```
 
 Part 3:
 For illustrative purposes, we create a small class:
-(For convenience, we put everything scripte simply in the body tag of the html file or in a <script> - Tag.)
+(For convenience, we put everything scripte simply in the body tag of the html 
+file or in a <script> - Tag.)
 
 ``` Javascript
 function Test()
@@ -46,7 +48,6 @@ Test.prototype.OnButton1Click = function(sender){
 Test.prototype.OnTextBoxInput = function(sender){
   this._UIButton1.html(sender.val());
 };
-
 ```
 
 License:
