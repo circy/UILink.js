@@ -69,6 +69,59 @@ Step 1:
 </html>
 ```
 
+Step 2:
+
+Now a few test modules.
+The modules look different also as the above html but both modules have completely the same radio tina quality. It is only to show that you can write much but little, reaching into compounds with UILink.js the same. ;-)
+
+``` Javascript
+//Modul1 with probertis
+function Modul1(){
+  this._Button1;
+  this._TextBox1;
+}
+
+Modul1.prototype.OnButton1Click = finction(sender){
+  alert(sender.html());
+  this._TextBox1.val(sender.html());
+};
+
+Modul1.prototype.OnTextBox1Input = finction(sender){
+  this._Button1.html(sender.html());
+};
+
+//Modul2 without probertis
+function Modul2(){
+}
+
+Modul2.prototype.OnButton1Click = finction(sender){
+  alert(sender.html());
+  this._TextBox1.val(sender.html());
+};
+
+Modul2.prototype.OnTextBox1Input = finction(sender){
+  this._Button1.html(sender.html());
+};
+```
+
+Step 3:
+
+Using UILink.js! 
+First way:
+``` javascript
+var test1 = new Modul1();
+//and now UIlink
+AddUILink(test1,$("#Modul1"));
+```
+
+and whit Jquery:
+``` javascript
+var test2 = new Modul2();
+//and now UIlink
+$("#Modul1").uilink(test2);
+```
+
+
 Other stuff:
 =========
 
