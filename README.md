@@ -118,14 +118,31 @@ and whit Jquery:
 ``` javascript
 var test2 = new Modul2();
 //and now UIlink
-$("#Modul1").uilink(test2);
+$("#Modul1").uiLink(test2);
 ```
 
+That's it. Now both modules are on the same page and can respond to the evente that were set in the html.
+
+Must be matched with the classes or objects If in addition there html new elements this again.
+
+The first way in which class or object, a member named _UILink was created. And this can be called in the class or in the Object.
+``` javascript
+this._UILink.Update();
+```
+
+The next way is Jquery:
+``` javascript
+$("#Modul1").trigger("UILinkUpdate");
+```
 
 Other stuff:
 =========
 
+Auto Test:
 [![Build Status](https://travis-ci.org/circy/UILink.js.png?branch=master)](https://travis-ci.org/circy/UILink.js)
+
+NPM Repo:
+
 
 License:
 =========
