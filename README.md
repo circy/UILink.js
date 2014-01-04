@@ -109,6 +109,7 @@ Test.prototype.Print = function(){
 };
 ```
 
+[![Build Status](https://travis-ci.org/circy/UILink.js.png?branch=master)](https://travis-ci.org/circy/UILink.js)
 
 License:
 =========
