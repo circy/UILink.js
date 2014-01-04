@@ -1,3 +1,9 @@
+/*
+        MIT License http://www.opensource.org/licenses/mit-license.php
+        Author & (c) 2014 Senastian Kreissl
+	https://github.com/circy
+*/
+
 (function (root, factory) {
     if (typeof define === 'function' && define.amd) {
         // AMD. Register as an anonymous module.
