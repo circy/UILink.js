@@ -26,6 +26,48 @@ Using:
 To demonstrate the usage of uilink, I will show here a small example.
 
 Step 1:
+``` HTML
+<html>
+  <head>
+    <title>UILink.js - simpleTest</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/x.x/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/UIlink.js"></script>
+  </head>
+  <body>
+  
+  <div id="Modul1">
+    <button 
+    data-uilinkname="Button1" 
+    data-uilinkevent="click" 
+    data-uilinkeventfunc="OnButton1Click">
+    Click me...
+    </button>
+    
+    <input 
+    data-uilinkname="TextBox1" 
+    data-uilinkevent="input" 
+    data-uilinkeventfunc="OnTextBox1Input">
+    ...
+    </input>
+  </div>
+  
+  <div id="Modul2">
+    <button data-uilinkname="Button1" >
+    Click me...
+    </button>
+    
+    <input data-uilinkname="TextBox1">
+    ...
+    </input>
+  </div>
+  
+  <script>
+  // Here comes our javascript...
+  </script>
+  
+  </body>
+</html>
+```
 
 Other stuff:
 =========
