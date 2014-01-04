@@ -1,6 +1,6 @@
 /*
         MIT License http://www.opensource.org/licenses/mit-license.php
-        Author & (c) 2014 Senastian Kreissl
+        Author & (c) 2014 Sebastian Kreissl
 	https://github.com/circy
 */
 
