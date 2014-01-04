@@ -118,7 +118,7 @@ and whit Jquery:
 ``` javascript
 var test2 = new Modul2();
 //and now UIlink
-$("#Modul1").uiLink(test2);
+$("#Modul2").uiLink(test2);
 ```
 
 That's it. Now both modules are on the same page and can respond to the evente that were set in the html.
@@ -132,7 +132,7 @@ this._UILink.Update();
 
 The next way is Jquery:
 ``` javascript
-$("#Modul1").trigger("UILinkUpdate");
+$("#Modul2").trigger("UILinkUpdate");
 ```
 
 Other stuff:
@@ -142,7 +142,7 @@ Auto Test:
 [![Build Status](https://travis-ci.org/circy/UILink.js.png?branch=master)](https://travis-ci.org/circy/UILink.js)
 
 NPM Repo:
-
+[![NPM version](https://badge.fury.io/js/uilink.js.png)](http://badge.fury.io/js/uilink.js)
 
 License:
 =========
