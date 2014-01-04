@@ -1,10 +1,10 @@
 (function (root, factory) {
     if (typeof define === 'function' && define.amd) {
         // AMD. Register as an anonymous module.
-        define(['jquery'], factory);
+        define(["jquery"], factory);
     } else if (typeof exports === 'object') {
         // Node/CommonJS
-        module.exports = factory(require('jquery'));
+        module.exports = factory(require("jquery"));
     } else {
         // Browser globals
         root.UILink = factory(root.jQuery);
@@ -43,7 +43,7 @@
 		});
 	}
 
-	$.fn.uiLink = function(toParseObject) {
+	if($ && $.fn) $.fn.uiLink = function(toParseObject) {
 		AddUILink(toParseObject, this);
 	};
 

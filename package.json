@@ -1,10 +1,10 @@
 {
-  "name": "UILink.js",
-  "version": "0.1.0",
+  "name": "uilink.js",
+  "version": "0.1.1",
   "description": "",
-  "main": "Lib/UILinkPlugin.js",
+  "main": "Lib/UILink.js",
   "scripts": {
-    "test": "npm test"
+    "test": "mocha -R spec"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/circy/UILink.js/issues"
   },
-  "homepage": "https://github.com/circy/UILink.js"
+  "homepage": "https://github.com/circy/UILink.js",
+  "devDependencies": {
+    "should": "~2.1.1",
+    "mocha": "~1.16.2",
+    "sandboxed-module": "~0.3.0"
+  }
 }
