@@ -1,10 +1,10 @@
 var $ = require("jquery");
 var template = require("./modul2.jade");
+require("../../");
 
-function Modul2(eventhandeler,area)
+function Modul2(area)
 {
     this._area = area;
-    this._eventHandeler = eventhandeler;
 
     this._UIButton1 = "null";
     this._UIButton2 = "null";
@@ -12,7 +12,7 @@ function Modul2(eventhandeler,area)
 }
 
 Modul2.prototype.print = function(){
-    this._area.html(template).trigger("UILinkUpdate");
+    this._area.html(template).uiLink(this);
     this._UIButton2.on("click",function() {
         alert($(this).html());
     });

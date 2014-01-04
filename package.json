@@ -1,0 +1,19 @@
+{
+  "name": "UILink.js",
+  "version": "0.1.0",
+  "description": "",
+  "main": "Lib/UILinkPlugin.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/circy/UILink.js.git"
+  },
+  "author": "Sebastian Kreissl",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/circy/UILink.js/issues"
+  },
+  "homepage": "https://github.com/circy/UILink.js"
+}

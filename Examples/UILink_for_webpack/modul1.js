@@ -1,14 +1,9 @@
 var $ = require("jquery");
 var template = require("./modul1.jade");
 
-function Modul1(eventhandeler,area)
+function Modul1(area)
 {
     this._area = area;
-    this._eventHandeler = eventhandeler;
-
-    this._UIButton1 = "null";
-    this._UIButton2 = "null";
-    this._UITextBox1 = "null";
 
     this._UILink = "null";
 }
