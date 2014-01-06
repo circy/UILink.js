@@ -2,7 +2,6 @@ var SandboxedModule = require('sandboxed-module');
 SandboxedModule.registerBuiltInSourceTransformer("istanbul");
 
 var should = require("should");
-
 describe("exports", function() {
 	
 	it("should add itself to the jquery prototype", function() {
