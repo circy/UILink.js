@@ -146,6 +146,7 @@ NPM Repo:
 
 License:
 =========
+
 Copyright (c) 2014 Sebastian Kreissl
 
 MIT (http://www.opensource.org/licenses/mit-license.php)
