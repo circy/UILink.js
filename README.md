@@ -113,7 +113,6 @@ var test1 = new Modul1();
 //and now UIlink
 AddUILink(test1,$("#Modul1"));
 ```
-
 and whit Jquery:
 ``` javascript
 var test2 = new Modul2();
@@ -129,7 +128,6 @@ The first way in which class or object, a member named _UILink was created. And 
 ``` javascript
 this._UILink.Update();
 ```
-
 The next way is Jquery:
 ``` javascript
 $("#Modul2").trigger("UILinkUpdate");
