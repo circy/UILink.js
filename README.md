@@ -5,7 +5,8 @@ Classes or objects with extended members that are generated from the html and it
 
 Include & Test
 =========
-Install or include by HTML-Tag:
+Install or 
+include by HTML-Tag:
 ``` HTML
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/x.x/jquery.min.js"></script>
   <script type="text/javascript" src="lib/UIlink.js"></script>
