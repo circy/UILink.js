@@ -16,12 +16,10 @@ Install from npm (Package manager. Installs, publishes and manages node programs
 ``` javascript
   npm install uilink.js
 ```
-
 Test:
 ``` javascript
   npm test
 ```
-
 Using:
 =========
 To demonstrate the usage of uilink, I will show here a small example.
