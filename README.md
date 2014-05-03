@@ -20,6 +20,7 @@ Test:
 ``` javascript
   npm test
 ```
+
 Using:
 =========
 To demonstrate the usage of uilink, I will show here a small example.
