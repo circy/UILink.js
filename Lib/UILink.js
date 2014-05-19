@@ -1,7 +1,7 @@
 /*
-       MIT License http://www.opensource.org/licenses/mit-license.php
-       Author & (c) 2014 Sebastian Kreissl
-       https://github.com/circy
+              MIT License http://www.opensource.org/licenses/mit-license.php
+              Author & (c) 2014 Sebastian Kreissl
+              https://github.com/circy
  */
 (function (root, factory) {
     if (typeof define === 'function' && define.amd) {
@@ -23,9 +23,7 @@
             var upperCaseName = name.substr(0, 1).toUpperCase() + name.substr(1);
             var event = item.data("uilinkevent");
             var valbind = item.data("uilinkvalbind");
-
             toParseObject["_" + name] = item;
-
             if(event) {
                 var functionName = item.data("uilinkeventfunc");
                 if(functionName) {
@@ -41,7 +39,6 @@
                     }
                 }
             }
-
             if(valbind)
             {
                 var val = item.data("uilinkvalbind");
@@ -53,7 +50,6 @@
                     throw new Error("No data-uilinkvalbind attribute found");
                 }
             }
-
             function bindEvent(toParseObject, eventName, propertyName) {
                 item.on(eventName, function(event) {
                     toParseObject[propertyName](item, event);
@@ -61,11 +57,9 @@
             }
         });
     }
-
     if($ && $.fn) $.fn.uiLink = function(toParseObject) {
         AddUILink(toParseObject, this);
     };
-
     return function(toParseObject, area) {
         var item = {};
         area.on("UILinkUpdate", item.Update = function() {
