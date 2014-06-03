@@ -43,9 +43,11 @@
             {
                 var val = item.data("uilinkvalbind");
                 if(val) {
+                    
                     item.on("input", function(event) {
                         toParseObject[val] = $(this).val();
                     });
+                    
                 } else {
                     throw new Error("No data-uilinkvalbind attribute found");
                 }
