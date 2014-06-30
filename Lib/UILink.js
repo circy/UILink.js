@@ -1,7 +1,7 @@
 /*
-              MIT License http://www.opensource.org/licenses/mit-license.php
-              Author & (c) 2014 Sebastian Kreissl
-              https://github.com/circy
+           MIT License http://www.opensource.org/licenses/mit-license.php
+           Author & (c) 2014 Sebastian Kreissl
+           https://github.com/circy
  */
 (function (root, factory) {
     if (typeof define === 'function' && define.amd) {
@@ -43,11 +43,9 @@
             {
                 var val = item.data("uilinkvalbind");
                 if(val) {
-                    
                     item.on("input", function(event) {
                         toParseObject[val] = $(this).val();
                     });
-                    
                 } else {
                     throw new Error("No data-uilinkvalbind attribute found");
                 }
