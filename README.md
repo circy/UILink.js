@@ -136,8 +136,6 @@ $("#Modul2").trigger("UILinkUpdate");
 Other stuff:
 =========
 
-Auto Test:
-[![Build Status](https://travis-ci.org/circy/UILink.js.png?branch=master)](https://travis-ci.org/circy/UILink.js)
 
 NPM Repo:
 [![NPM version](https://badge.fury.io/js/uilink.js.png)](http://badge.fury.io/js/uilink.js)
